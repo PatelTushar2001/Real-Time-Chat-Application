@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ProfileImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_ProfileImg"
+        app:layout_constraintTop_toTopOf="@+id/iv_ProfileImg"
+        tools:text="Olivia Anna" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_LastMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter"
+        android:maxLines="1"
+        android:textColor="@color/status_color"
+        android:textFontWeight="400"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/iv_CurrentStatus"
+        app:layout_constraintStart_toStartOf="@+id/tv_UserName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_UserName"
+        tools:text="Hi, please check the last task, that I...." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_LastOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_UserName"
+        tools:text="31 min" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_CurrentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_LastOnline"
+        app:srcCompat="@drawable/ic_current_status"
+        app:tint="@color/app_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

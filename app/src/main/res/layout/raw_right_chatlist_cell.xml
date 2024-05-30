@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="10dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="22dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:visibility="visible"-->
+<!--            >-->
+
+            <TextView
+                android:id="@+id/tv_MsgText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@color/btn_yellow"
+                android:fontFamily="@font/inter"
+                android:lineHeight="22dp"
+                android:layout_marginEnd="22dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:adjustViewBounds="true"
+                android:minWidth="120dp"
+                android:text="jd  "
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_MsgTime"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/btn_yellow"-->
+<!--                android:gravity="end"-->
+<!--                android:paddingEnd="12dp"-->
+<!--                android:layout_marginBottom="-2dp"-->
+<!--                android:paddingBottom="8dp"-->
+<!--                android:minWidth="200dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textFontWeight="300"-->
+<!--                android:textSize="10sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                tools:text="11:30 pm" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_RightPdf"
+            android:backgroundTint="@color/status_color"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:clickable="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            android:layout_marginEnd="22dp"
+            android:layout_alignParentEnd="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_Pdf"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/img_pdffile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_RightPdfName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textFontWeight="400"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimePdf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Pdf"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Pdf"
+                    tools:text="Pdf Name" />
+
+                <TextView
+                    android:id="@+id/tv_RightMsgTimePdf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|bottom"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/black"
+                    android:textFontWeight="300"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_RightPdfName"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Pdf"
+                    tools:text="11:30 pm" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/vly_RightChatUrlImage"-->
+<!--            android:backgroundTint="@color/status_color"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:scaleType="fitEnd"-->
+<!--            android:clickable="true"-->
+<!--            android:checkable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_marginEnd="22dp"-->
+<!--            android:layout_alignParentEnd="true">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                >-->
+
+                <ImageView
+                    android:id="@+id/iv_RightChatUrlImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    android:layout_marginEnd="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_RightMsgTimeImage"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:gravity="end|bottom"-->
+<!--                    android:paddingEnd="12dp"-->
+<!--                    android:paddingBottom="8dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textFontWeight="300"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:layout_marginBottom="-4dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/iv_RightChatUrlImage"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    tools:text="11:30 pm" />-->
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_RightContact"
+            android:backgroundTint="@color/status_color"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:clickable="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            android:layout_marginEnd="22dp"
+            android:layout_alignParentEnd="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_RightContactName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/black"
+                    android:textFontWeight="400"
+                    android:maxLines="2"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Pdf Name" />
+
+                <TextView
+                    android:id="@+id/tv_RightViewAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="View All"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimeContact"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_RightContactName" />
+
+                <TextView
+                    android:id="@+id/tv_RightMsgTimeContact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/black"
+                    android:textFontWeight="300"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="11:30 pm" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_RightAudio"
+            android:backgroundTint="#DCDCDC"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:clickable="true"
+            android:checkable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            android:layout_marginEnd="22dp"
+            android:layout_alignParentEnd="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_RightAudio"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="16dp"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/ic_mp3"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimeAudio"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_RightAudioName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimeAudio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_RightAudio"
+                    app:layout_constraintTop_toTopOf="@+id/iv_RightAudio"
+                    tools:text="Audio File Name" />
+
+                <TextView
+                    android:id="@+id/tv_RightMsgTimeAudio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|bottom"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/black"
+                    android:textFontWeight="300"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="11:30 pm" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</RelativeLayout>

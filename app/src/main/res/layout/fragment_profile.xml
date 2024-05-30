@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_PersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:text="Profile" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_UserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/til_UserName"
+        tools:text="+91 3625147895" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_Back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="40dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrowleft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_Back" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_EditImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_UserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/edt_bg"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textAutoComplete"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:boxStrokeColor="@null"
+        app:cursorColor="@color/white"
+        app:endIconDrawable="@drawable/ic_edit_edt"
+        app:endIconMode="custom"
+        app:endIconTint="#8CAAB9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edt_bg"
+            android:drawableStart="@drawable/ic_useradd"
+            android:drawablePadding="26dp"
+            android:enabled="false"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingVertical="18dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/edt_bg"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:boxStrokeColor="@null"
+        app:cursorColor="@color/white"
+        app:endIconDrawable="@drawable/ic_edit_edt"
+        app:endIconMode="custom"
+        app:endIconTint="#8CAAB9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_UserName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_Email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edt_bg"
+            android:drawableStart="@drawable/ic_usertag"
+            android:drawablePadding="26dp"
+            android:drawableTint="#8CAAB9"
+            android:enabled="false"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="18dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/edt_bg"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:boxStrokeColor="@null"
+        app:cursorColor="@color/white"
+        app:endIconDrawable="@drawable/ic_edit_edt"
+        app:endIconMode="custom"
+        app:endIconTint="#8CAAB9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_Password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edt_bg"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="26dp"
+            android:drawableTint="#8CAAB9"
+            android:enabled="false"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingVertical="18dp"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_SignOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/btn_yellow"
+        android:minHeight="60dp"
+        android:text="Sign Out"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_AddImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_camera_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_addsquare"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_AddImage"
+        app:layout_constraintEnd_toEndOf="@+id/iv_AddImage"
+        app:layout_constraintStart_toStartOf="@+id/iv_AddImage"
+        app:layout_constraintTop_toTopOf="@+id/iv_AddImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

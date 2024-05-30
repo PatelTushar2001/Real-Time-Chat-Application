@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- chat data -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_LeftMsgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="22dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/custom_chat_appcolor_bg"
+        android:fontFamily="@font/inter"
+        android:lineHeight="22dp"
+        android:maxWidth="300dp"
+        android:minWidth="120dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:paddingEnd="58dp"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Hnc ckjs jnckjnxc   nckjn knjkjn jnkajsn  " />
+
+    <!--left chat time-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_LeftMsgTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="end"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:textFontWeight="300"
+        android:textSize="8sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_LeftMsgText"
+        app:layout_constraintTop_toTopOf="@+id/tv_LeftMsgText"
+        tools:text="11:30 pm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_LeftTickMsg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_LeftMsgText"
+        app:layout_constraintEnd_toEndOf="@+id/tv_LeftMsgTime"
+        app:tint="@color/btn_yellow" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_RightMsgText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/custom_chat_yellow_bg"
+        android:fontFamily="@font/inter"
+        android:lineHeight="22dp"
+        android:maxWidth="300dp"
+        android:minWidth="120dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:paddingEnd="58dp"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_LeftMsgText"
+        tools:text="Hnckdkj wdnkwden qwidunqwund wqdunqwu  " />
+
+    <!--right chat time-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_RightMsgTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="end"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/black"
+        android:textFontWeight="300"
+        android:textSize="8sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_RightMsgText"
+        app:layout_constraintTop_toTopOf="@+id/tv_RightMsgText"
+        tools:text="11:30 pm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_RightTickMsg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_RightMsgText"
+        app:layout_constraintEnd_toEndOf="@+id/tv_RightMsgText"
+        app:tint="@color/edt_bg" />
+
+    <!-- image data -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_LeftChatUrlImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="22dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_launcher_background"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--left image chat time-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_LeftImageTime"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:gravity="end"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textFontWeight="300"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_LeftChatUrlImage"
+        app:layout_constraintEnd_toEndOf="@+id/iv_LeftChatUrlImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_LeftChatUrlImage"
+        tools:text="11:30 pm" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_RightChatUrlImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_launcher_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_LeftChatUrlImage" />
+
+    <!--right image chat time-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_RightImageTime"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:gravity="end"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textFontWeight="300"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_RightChatUrlImage"
+        app:layout_constraintEnd_toEndOf="@+id/iv_RightChatUrlImage"
+        app:layout_constraintStart_toStartOf="@+id/iv_RightChatUrlImage"
+        tools:text="11:30 pm" />
+
+    <!-- pdf view -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_LeftPdfView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cly_LeftPDF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_LeftPdf"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitEnd"
+                android:src="@drawable/img_pdffile"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftPdfName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_LeftMsgTimePdf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_LeftPdf"
+                app:layout_constraintTop_toTopOf="@+id/iv_LeftPdf"
+                tools:text="Pdf Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftMsgTimePdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_LeftPdf"
+                tools:text="11:30 pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_RightPdfView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_LeftPdfView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_RightPdf"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitEnd"
+                android:src="@drawable/img_pdffile"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightPdfName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimePdf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_RightPdf"
+                app:layout_constraintTop_toTopOf="@+id/iv_RightPdf"
+                tools:text="Pdf Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightMsgTimePdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_RightPdf"
+                tools:text="11:30 pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- contact data -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_LeftContact"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Contact Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftViewAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="View All"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_LeftMsgTimeContact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_LeftContactName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftMsgTimeContact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="11:30 pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_RightContact"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_LeftContact">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Contact Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightViewAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="View All"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_RightMsgTimeContact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_RightContactName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightMsgTimeContact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="11:30 pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- audio data-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_LeftAudio"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_LeftAudio"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:padding="16dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_mp3"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/tv_LeftMsgTimeAudio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftAudioName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_LeftMsgTimeAudio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_LeftAudio"
+                app:layout_constraintTop_toTopOf="@+id/iv_LeftAudio"
+                tools:text="Audio Fiscc fsc dfs fs sf ewfew le Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftMsgTimeAudio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="11:30 pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_RightAudio"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_LeftAudio">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_RightAudio"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:padding="16dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_mp3"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimeAudio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightAudioName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_RightMsgTimeAudio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_RightAudio"
+                app:layout_constraintTop_toTopOf="@+id/iv_RightAudio"
+                tools:text="Audio Fiscc fsc dfs fs sf ewfew le Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightMsgTimeAudio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="11:30 pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- location -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_LeftLocation"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="22dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cly_LeftLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_LeftLocation"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_background"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="15/16, Society Lane, Bimanagar, Ambawadi, Ahmedabad, Gujarat 380015, India"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_LeftLocation"
+                app:layout_constraintStart_toStartOf="@+id/iv_LeftLocation"
+                app:layout_constraintTop_toBottomOf="@+id/iv_LeftLocation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_LeftLocationTimePdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_LeftLocation"
+                app:layout_constraintStart_toStartOf="@+id/iv_LeftLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tv_LeftLocation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="11:30 pm" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_RightLocation"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="@color/chat_other_items"
+        android:checkable="true"
+        android:clickable="true"
+        android:layout_marginEnd="22dp"
+        android:focusable="true"
+        android:scaleType="fitEnd"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_LeftLocation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cly_RightLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_RightLocation"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="15/16, Society Lane, Bimanagar, Ambawadi, Ahmedabad, Gujarat 380015, India"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_RightLocation"
+                app:layout_constraintStart_toStartOf="@+id/iv_RightLocation"
+                app:layout_constraintTop_toBottomOf="@+id/iv_RightLocation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_RightLocationTimePdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:gravity="end|bottom"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textFontWeight="300"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_RightLocation"
+                app:layout_constraintStart_toStartOf="@+id/iv_RightLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tv_RightLocation"
+                tools:text="11:30 pm" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cly_UnknownUserOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80617D8A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_RightMsgText">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_UnknownUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/lbl_title_unknown_user"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iv_Block"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_UnknownUserName"
+            app:layout_constraintStart_toStartOf="@+id/tv_UnknownUserName"
+            app:layout_constraintTop_toBottomOf="@+id/tv_UnknownUserName">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_block"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter"
+                android:text="Block"
+                android:textColor="@color/btn_yellow"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iv_Continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_UnknownUserName"
+            app:layout_constraintStart_toStartOf="@+id/tv_UnknownUserName"
+            app:layout_constraintTop_toBottomOf="@+id/iv_Block">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_circle_selected"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter"
+                android:text="Continue"
+                android:textColor="@color/btn_yellow"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_background">#212832</color>
+    <color name="btn_yellow">#FED36A</color>
+    <color name="edt_bg">#455A64</color>
+    <color name="sign_in_font_color">#8CAAB9</color>
+    <color name="unselected_btn">#263238</color>
+    <color name="bnv_text_color">#617D8A</color>
+    <color name="status_color">#B8B8B8</color>
+    <color name="transperent">#00B8B8B8</color>
+    <color name="chat_other_items">#DCDCDC</color>
+    <color name="endicon_color">#8CAAB9</color>
+</resources>

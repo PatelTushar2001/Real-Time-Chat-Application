@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627935624183",
+    "project_id": "task-chat-app-88822",
+    "storage_bucket": "task-chat-app-88822.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627935624183:android:04e98537de075e55c6ccf2",
+        "android_client_info": {
+          "package_name": "com.example.task1921_2_24createachatappusingfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6RH7MKOKiiY4DOkYB5kV7aNiz6N0CKxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

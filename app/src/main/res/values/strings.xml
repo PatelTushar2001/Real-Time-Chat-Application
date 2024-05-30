@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Task 19 [21-2-24] Create a chat app using firebase</string>
+    <string name="lbl_manage_your_task_with">Manage </string>
+    <string name="map_api_key">AIzaSyBayD4ANf6xTt_bDgUHpHdLmuD3jJjL3fE</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_policy">I have read &amp; agreed to DayTask <b><font color="#FED36A">Privacy Policy, Terms &amp; Condition</font></b></string>
+    <string name="client_id">347962034753-iec93g3eg90mpbgr4piu14llfpturoea.apps.googleusercontent.com</string>
+    <string name="doc"><iframe style='border: none;' height='100%' src='http://docs.google.com/viewer?url=+location to your PDF File+' width='100%'></iframe></string>
+    <string name="lbl_title_unknown_user">You\'re receiving messages from %1$s</string>
+
+</resources>

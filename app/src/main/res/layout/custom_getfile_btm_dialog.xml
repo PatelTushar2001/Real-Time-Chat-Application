@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="96dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/chat_other_items"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_Gallary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/iv_Gallary"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg_trans"
+                    android:src="@drawable/ic_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_Gallary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gallary"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_Gallary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Gallary"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Gallary" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_Camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/view_Gallary"
+                app:layout_constraintStart_toStartOf="@+id/view_Gallary"
+                app:layout_constraintTop_toBottomOf="@+id/view_Gallary">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/iv_Camera"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg_trans"
+                    android:src="@drawable/photo_camera"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_Camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Camera"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_Camera"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Camera"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Camera" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_Document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/view_Gallary"
+                app:layout_constraintStart_toStartOf="@+id/view_Gallary"
+                app:layout_constraintTop_toBottomOf="@+id/view_Camera">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/iv_Document"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg_trans"
+                    android:src="@drawable/ic_doc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_Document"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Document"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_Document"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Document"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Document" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_Contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/view_Gallary"
+                app:layout_constraintStart_toStartOf="@+id/view_Gallary"
+                app:layout_constraintTop_toBottomOf="@+id/view_Document">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/iv_Contact"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg_trans"
+                    android:src="@drawable/ic_contacts"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_Contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_Contact"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Contact"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Contact" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_Music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/view_Gallary"
+                app:layout_constraintStart_toStartOf="@+id/view_Gallary"
+                app:layout_constraintTop_toBottomOf="@+id/view_Contact">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/iv_Music"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg_trans"
+                    android:src="@drawable/ic_music"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_Music"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Audio"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_Music"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Music"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Music" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_Location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view_Music"
+                app:layout_constraintStart_toStartOf="@+id/view_Music"
+                app:layout_constraintTop_toBottomOf="@+id/view_Music">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/iv_Location"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/btn_bg_trans"
+                    android:src="@drawable/ic_location_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_Location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_Location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_Location"
+                    app:layout_constraintTop_toTopOf="@+id/iv_Location" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--<ImageButton-->
+<!--android:id="@+id/iv_Document"-->
+<!--android:layout_width="50dp"-->
+<!--android:layout_height="50dp"-->
+<!--android:background="@drawable/btn_bg_trans"-->
+<!--android:src="@drawable/ic_doc"-->
+<!--app:layout_constraintBottom_toTopOf="@+id/tv_Camera"-->
+<!--app:layout_constraintEnd_toStartOf="@+id/iv_Camera"-->
+<!--app:layout_constraintHorizontal_bias="0.5"-->
+<!--app:layout_constraintStart_toEndOf="@+id/iv_Gallary"-->
+<!--app:layout_constraintTop_toTopOf="@+id/iv_Camera" />-->
+
+<!--<androidx.appcompat.widget.AppCompatTextView-->
+<!--android:id="@+id/tv_Document"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Document"-->
+<!--android:textColor="@color/black"-->
+<!--app:layout_constraintEnd_toEndOf="@+id/iv_Document"-->
+<!--app:layout_constraintStart_toStartOf="@+id/iv_Document"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/iv_Document" />-->
+

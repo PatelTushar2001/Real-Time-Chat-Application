@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ChatFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cly_UserActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_Back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrowleft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_ProfileImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_Back"
+            app:layout_constraintStart_toEndOf="@+id/iv_Back"
+            app:layout_constraintTop_toTopOf="@+id/iv_Back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_UserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter"
+            android:maxLines="2"
+            android:text="Olivia Anna"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_VideoCall"
+            app:layout_constraintStart_toEndOf="@+id/iv_ProfileImg"
+            app:layout_constraintTop_toTopOf="@+id/iv_ProfileImg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/status_color"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_UserName"
+            app:layout_constraintTop_toBottomOf="@+id/tv_UserName"
+            tools:text="Online" />
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:id="@+id/iv_VideoCall"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_video"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/iv_Call"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:id="@+id/iv_Call"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="40dp"
+            android:background="@drawable/ic_callcalling"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:id="@+id/nsv_Chat"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:fillViewport="true"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/til_Message"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/cly_UserActionBar">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/til_Message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cly_UserActionBar"
+        app:reverseLayout="false"
+        app:stackFromEnd="true" />
+
+    <!-- unknown user dialog -->
+    <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                android:id="@+id/cly_UnknownUserOptions"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:background="#212832"-->
+    <!--                android:visibility="gone"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/tv_UnknownUserName"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_margin="22dp"-->
+    <!--                    android:fontFamily="@font/inter"-->
+    <!--                    android:text="@string/lbl_title_unknown_user"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:textSize="16sp"-->
+    <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                    android:id="@+id/iv_Block"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="16dp"-->
+    <!--                    android:minHeight="48dp"-->
+    <!--                    app:layout_constraintEnd_toEndOf="@+id/tv_UnknownUserName"-->
+    <!--                    app:layout_constraintStart_toStartOf="@+id/tv_UnknownUserName"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/tv_UnknownUserName">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageView6"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:src="@drawable/ic_block"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView13"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginStart="16dp"-->
+    <!--                        android:fontFamily="@font/inter"-->
+    <!--                        android:text="Block"-->
+    <!--                        android:textColor="@color/btn_yellow"-->
+    <!--                        android:textSize="16dp"-->
+    <!--                        android:textStyle="bold"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
+    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                        app:layout_constraintStart_toEndOf="@+id/imageView6"-->
+    <!--                        app:layout_constraintTop_toTopOf="@+id/imageView6" />-->
+    <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                    android:id="@+id/iv_Continue"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="16dp"-->
+    <!--                    android:minHeight="48dp"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                    app:layout_constraintEnd_toEndOf="@+id/tv_UnknownUserName"-->
+    <!--                    app:layout_constraintStart_toStartOf="@+id/tv_UnknownUserName"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/iv_Block">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/imageView7"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:src="@drawable/ic_check_circle_selected"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/textView14"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginStart="16dp"-->
+    <!--                        android:fontFamily="@font/inter"-->
+    <!--                        android:text="Continue"-->
+    <!--                        android:textColor="@color/btn_yellow"-->
+    <!--                        android:textSize="16dp"-->
+    <!--                        android:textStyle="bold"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"-->
+    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                        app:layout_constraintStart_toEndOf="@+id/imageView7"-->
+    <!--                        app:layout_constraintTop_toTopOf="@+id/imageView7" />-->
+    <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="28dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/app_background"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="Type a message"
+        android:inputType="textAutoComplete"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:boxBackgroundMode="none"
+        app:boxStrokeColor="@null"
+        app:cursorColor="#07EFD4"
+        app:endIconDrawable="@drawable/ic_send"
+        app:endIconMode="custom"
+        app:endIconTint="@color/btn_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_RecordAudio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/ic_elementequal"
+        app:startIconTint="@color/btn_yellow">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_EnterMsg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/unselected_btn"
+            android:inputType="textMultiLine"
+            android:maxLines="6"
+            android:overScrollMode="always"
+            android:paddingVertical="19dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="40dp"
+            android:scrollIndicators="right"
+            android:scrollbarSize="2dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarThumbVertical="@color/white"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/et_EnterMsg"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginVertical="28dp"-->
+    <!--        android:layout_marginStart="22dp"-->
+    <!--        android:background="@color/unselected_btn"-->
+    <!--        android:ems="10"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:drawableStart="@drawable/ic_elementequal"-->
+    <!--        android:drawableEnd="@drawable/ic_send"-->
+    <!--        android:paddingEnd="16dp"-->
+    <!--        android:paddingStart="12dp"-->
+    <!--        android:drawablePadding="20dp"-->
+    <!--        android:textColorHint="@color/sign_in_font_color"-->
+    <!--        android:inputType="text"-->
+    <!--        android:minHeight="58dp"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        android:hint="Type a message"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/imageView6"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_RecordAudio"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginVertical="28dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/view_microphone_bg"
+        android:padding="16dp"
+        android:src="@drawable/ic_microphone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

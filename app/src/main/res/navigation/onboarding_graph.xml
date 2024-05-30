@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_graph"
+    android:screenOrientation="sensor"
+    app:startDestination="@id/letsStartFragment">
+    <fragment
+        android:id="@+id/letsStartFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.LetsStartFragment"
+        android:label="fragment_lets_start"
+        tools:layout="@layout/fragment_lets_start">
+        <action
+            android:id="@+id/action_letsStartFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_createAccFragment"
+            app:destination="@id/createAccFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/createAccFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.CreateAccFragment"
+        android:label="fragment_create_acc"
+        tools:layout="@layout/fragment_create_acc">
+        <action
+            android:id="@+id/action_createAccFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_createAccFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages">
+
+        <action
+            android:id="@+id/action_messagesFragment_to_signInFragment3"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_viewFullImageFragment"
+            app:destination="@id/viewFullImageFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_editFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_editFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_chatFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+
+        <action
+            android:id="@+id/action_chatFragment_to_viewFullImageFragment"
+            app:destination="@id/viewFullImageFragment" />
+        <argument
+            android:name="UserData"
+            app:argType="com.example.task1921_2_24createachatappusingfirebase.model.UserData" />
+        <action
+            android:id="@+id/action_chatFragment_to_pdfViewFragment"
+            app:destination="@id/pdfViewFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_contactListFragment"
+            app:destination="@id/contactListFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_viewContactsFragment"
+            app:destination="@id/viewContactsFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_sendItemsFragment"
+            app:destination="@id/sendItemsFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFullImageFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.ViewFullImageFragment"
+        android:label="fragment_view_full_image"
+        tools:layout="@layout/fragment_view_full_image" >
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_viewFullImageFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <argument
+            android:name="isProfileImage"
+            app:argType="boolean" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/pdfViewFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.PdfViewFragment"
+        android:label="fragment_pdf_view"
+        tools:layout="@layout/fragment_pdf_view" >
+        <argument
+            android:name="ChatData"
+            app:argType="com.example.task1921_2_24createachatappusingfirebase.model.ChatData" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.ContactListFragment"
+        android:label="fragment_contact_list"
+        tools:layout="@layout/fragment_contact_list" >
+        <action
+            android:id="@+id/action_contactListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewContactsFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.ViewContactsFragment"
+        android:label="fragment_view_contacts"
+        tools:layout="@layout/fragment_view_contacts" >
+        <argument
+            android:name="chatData"
+            app:argType="com.example.task1921_2_24createachatappusingfirebase.model.ChatData" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendItemsFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.SendItemsFragment"
+        android:label="fragment_send_items"
+        tools:layout="@layout/fragment_send_items" >
+        <argument
+            android:name="chatData"
+            app:argType="com.example.task1921_2_24createachatappusingfirebase.model.SendChatData" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <argument
+            android:name="userData"
+            app:argType="com.example.task1921_2_24createachatappusingfirebase.model.UserData" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" >
+        <action
+            android:id="@+id/action_addUserFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_addUserFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment2"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" >
+        <action
+            android:id="@+id/action_groupFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.task1921_2_24createachatappusingfirebase.ui.fragments.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_viewFullImageFragment"
+            app:destination="@id/viewFullImageFragment" />
+    </fragment>
+</navigation>

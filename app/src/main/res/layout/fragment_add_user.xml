@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.AddUserFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_Back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="40dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_arrowleft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:text="Add New User"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Back"
+        app:layout_constraintEnd_toStartOf="@+id/iv_ProfileImg"
+        app:layout_constraintStart_toEndOf="@+id/iv_Back"
+        app:layout_constraintTop_toTopOf="@+id/iv_Back" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ProfileImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:srcCompat="@drawable/ic_person" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_CreateGroup"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_AddGroupPeople"
+        app:layout_constraintTop_toBottomOf="@+id/et_AddGroupPeople"
+        tools:listitem="@layout/raw_create_group_cell" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_AddUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_CreateGroup"
+        tools:listitem="@layout/raw_message_cell" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_CreateGroups"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="@color/btn_yellow"
+        android:fontFamily="@font/inter"
+        android:paddingVertical="20dp"
+        android:text="Create Group"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_AddGroupPeople"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_light"
+        android:hint="Add Group Name"
+        android:background="@null"
+        android:paddingStart="34dp"
+        android:minHeight="40dp"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textColorHint="@color/white"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
